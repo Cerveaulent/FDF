@@ -6,7 +6,7 @@
 /*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/03/26 18:57:18 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/09/13 21:00:33 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/09/21 15:19:51 by ccantin     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,6 +15,7 @@
 # define FDF_H
 # include "mlx.h"
 # include "libft.h"
+# include <math.h>
 # include "error_handler.h"
 # include "key_map.h"
 /*
@@ -33,11 +34,17 @@
 ** --------------------STRUCTURES------------------- **
 */
 
+// typedef struct	s_matrix
+// {
+// 	float		mat[3][3];
+// 	float		angl;
+// }				t_matrix;
+
 typedef struct			s_lpoints
 {
-	int					height;
-	int					x;
-	int					y;
+	double				height;
+	double				x;
+	double				y;
 	int					color;
 	int					alpha;
 	struct s_lpoints	*next;
@@ -83,6 +90,7 @@ typedef struct			s_hook
 	t_lpoints			*lpoints;
 	t_mlx				*mlx;
 	t_renderer			*rdr;
+	double				rx;
 }						t_hook;
 
 /*
@@ -133,5 +141,6 @@ void					transform(t_hook *hook, int key);
 **
 */
 void		clear_img(t_hook *hook);
-
+void test_main_bresenham(t_lpoints point_a, t_lpoints point_b, void *win_ptr, 
+	void *mlx_ptr);
 #endif

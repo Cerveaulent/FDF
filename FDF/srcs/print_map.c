@@ -6,7 +6,7 @@
 /*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/08/19 00:05:17 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/09/13 21:05:14 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/09/21 18:53:06 by ccantin     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,8 +19,8 @@ static t_lpoints	apply_scale(t_lpoints pt, t_hook *m_hook)
 
 	if (m_hook->map_info->map_scale <= 0)
 		m_hook->map_info->map_scale = 1;
-	result.x = pt.x * (m_hook->map_info->map_scale + m_hook->map_info->map_scale);
-	result.y = pt.y * (m_hook->map_info->map_scale + m_hook->map_info->map_scale);
+	result.x = round(pt.x * (m_hook->map_info->map_scale + m_hook->map_info->map_scale));
+	result.y = round(pt.y * (m_hook->map_info->map_scale + m_hook->map_info->map_scale));
 	result.color = pt.color;
 	return (result);
 }

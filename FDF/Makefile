@@ -6,7 +6,7 @@
 #    By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/03/28 17:33:52 by ccantin      #+#   ##    ##    #+#        #
-#    Updated: 2019/09/13 20:59:48 by ccantin     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/09/21 16:50:40 by ccantin     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -63,17 +63,17 @@ INC = $(addprefix $(INC_PATH)/,$(INC_NAME))
 SRCS_PATH = srcs
 
 SRCS_NAME = main.c \
-			parsing.c \
-			error_handler.c \
-			lpoints_handler.c \
+						lpoints_handler.c \
 			point_handler.c \
 			bresenham.c \
 			scale.c \
-			key_handler.c \
-			zoom_handler.c \
-			init_functions.c \
+						init_functions.c \
 			array_handler.c \
+			parsing.c \
+			error_handler.c \
+			key_handler.c \
 			print_map.c \
+			zoom_handler.c \
 			mlx_img_handler.c \
 			free_structs.c \
 			move.c \

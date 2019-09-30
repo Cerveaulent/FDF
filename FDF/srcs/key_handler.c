@@ -6,7 +6,7 @@
 /*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/08/18 16:04:54 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/09/13 21:00:56 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/09/19 14:30:57 by ccantin     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -46,6 +46,12 @@ int		key_pressed(int key, t_hook *m_hook)
 	else if (key == R)
 	{
 		reset_map(m_hook);
+		return (1);
+	}
+	else if (key == Y)
+	{
+		m_hook->rx += .1;
+		transform(m_hook, key);
 		return (1);
 	}
 	else if (key == I)
