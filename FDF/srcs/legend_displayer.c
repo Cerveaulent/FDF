@@ -3,23 +3,22 @@
 /*                                                              /             */
 /*   legend_displayer.c                               .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
+/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/01 10:50:56 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 16:18:06 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 18:05:15 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "fdf.h"
-#include <unistd.h>
 
 static void			put_legend_keyb(t_mlx *mlx, char *descr, int c)
 {
 	static int	height_ofs;
 	int			width_ofs;
 
-	height_ofs = !height_ofs ? TOP_OFFSET + 100 : height_ofs + 25;
+	height_ofs = !height_ofs ? TOP_OFFSET + 125 : height_ofs + 30;
 	width_ofs = L_OFFSET / 10;
 	mlx_string_put(mlx->mlx_ptr, mlx->win_ptr, \
 					width_ofs, height_ofs, c, descr);
@@ -34,11 +33,11 @@ static void			put_legend(t_mlx *mlx, char *mn)
 		pos--;
 	pos += mn[pos] == '/' ? 1 : 0;
 	mlx_string_put(mlx->mlx_ptr, mlx->win_ptr, \
-					W_WIDTH / 2, TOP_OFFSET / 2, 0x000000, mn + pos);
-	put_legend_keyb(mlx, "[ESC] // Quit Program", 0x000000);
-	put_legend_keyb(mlx, "[R]   // Reset Cam", 0x000000);
-	put_legend_keyb(mlx, "[< ^ > v] // Move Cam", 0x000000);
-	put_legend_keyb(mlx, "[Y / I] // Iso Cam", 0x000000);
+					W_WIDTH / 2, TOP_OFFSET / 2, _BLACK, mn + pos);
+	put_legend_keyb(mlx, "[ESC] // Quit Program", _BLACK);
+	put_legend_keyb(mlx, "[R]   // Reset Cam", _BLACK);
+	put_legend_keyb(mlx, "[< ^ > v] // Move Cam", _BLACK);
+	put_legend_keyb(mlx, "[Y / I] // Iso Cam", _BLACK);
 }
 
 static void			put_pane(t_mlx *mlx, int x, int y)
@@ -51,7 +50,7 @@ static void			put_pane(t_mlx *mlx, int x, int y)
     {
 		i = -1;
         while (++i < x)
-			mlx_pixel_put(mlx->mlx_ptr, mlx->win_ptr, i, j, 0x800000);
+			mlx_pixel_put(mlx->mlx_ptr, mlx->win_ptr, i, j, _RED);
     }
 }
 

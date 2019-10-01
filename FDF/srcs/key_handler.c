@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   key_handler.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
+/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/08/18 16:04:54 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 17:47:45 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 19:02:46 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -41,6 +41,8 @@ int		key_pressed(int key, t_hook *m_hook)
 		transform(m_hook);
 	else if (key == H || key == U)
 		modif_height(m_hook, key);
+	else if (key == C)
+		color_pick(m_hook);
 	return(0);
 }
 

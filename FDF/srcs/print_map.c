@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/08/19 00:05:17 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 12:49:46 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 18:56:00 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -32,7 +32,7 @@ int			print_map(t_hook *m_hook)
 	i = 0;
 	while (i < m_hook->map_info->map_size)
 	{
-		if (((i + 1)  % m_hook->map_info->nb_col))
+		if (((i + 1) % m_hook->map_info->nb_col))
 			main_bresenham(apply_scale(m_hook->tab_pts[i], m_hook), apply_scale(m_hook->tab_pts[i + 1], m_hook), m_hook->rdr);
 		if (i + m_hook->map_info->nb_col < m_hook->map_info->map_size)
 			main_bresenham(apply_scale(m_hook->tab_pts[i], m_hook), 

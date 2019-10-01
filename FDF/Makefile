@@ -3,10 +3,10 @@
 #                                                               /              #
 #    Makefile                                         .::    .:/ .      .::    #
 #                                                  +:+:+   +:    +:  +:+:+     #
-#    By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+      #
+#    By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/03/28 17:33:52 by ccantin      #+#   ##    ##    #+#        #
-#    Updated: 2019/10/01 17:42:00 by ccantin     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/10/01 18:58:32 by eschnell    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -52,7 +52,8 @@ INC_NAME =	fdf.h \
 			lpoints_handler.h \
 			array_handler.h \
 			key_map.h \
-			mouse_map.h
+			mouse_map.h \
+			colors.h
 
 INCLUDES = -I$(MLX_PATH) -I$(LIBFT_PATH) -I$(INC_PATH)
 
@@ -79,7 +80,8 @@ SRCS_NAME = main.c \
 			reset_map.c \
 			transfo_iso.c \
 			legend_displayer.c \
-			modif_height.c
+			modif_height.c \
+			colors.c
 
 SRCS = $(addprefix $(SRCS_PATH)/,$(SRCS_NAME))
 

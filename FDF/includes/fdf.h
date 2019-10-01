@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   fdf.h                                            .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
+/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/03/26 18:57:18 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 17:42:18 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 18:56:51 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,6 +15,7 @@
 # define FDF_H
 # include "mlx.h"
 # include "libft.h"
+# include "colors.h"
 # include <math.h>
 # include "error_handler.h"
 # include "key_map.h"
@@ -159,5 +160,10 @@ void 					test_main_bresenham(t_lpoints point_a,
 **
 */
 void					print_overlay(t_hook *hook, char *mapname);
+
+/*
+** --------------- color_picker functions ----------
+*/
+void					color_pick(t_hook *hook);
 
 #endif
