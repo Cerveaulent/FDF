@@ -6,7 +6,7 @@
 /*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/03/26 18:57:18 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/09/21 15:19:51 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 14:37:04 by ccantin     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -93,6 +93,15 @@ typedef struct			s_hook
 	double				rx;
 }						t_hook;
 
+typedef struct			s_err_bres
+{
+	int					dx; 
+	int					dy;
+	int					err;
+	int					sx;
+	int					sy;
+	int					e2;
+}						t_err_bres;
 /*
 ** -------------------------------------------------
 ** ------------------FUNCTIONS---------------------- **
