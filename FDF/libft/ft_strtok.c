@@ -1,33 +1,47 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strcspn.c                                     .::    .:/ .      .::   */
+/*   ft_strtok.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/11/18 13:59:09 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 14:18:33 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/07/16 04:23:08 by raging       #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/01 14:21:48 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strcspn(const char *s, const char *charset)
+static char	*ft_strtok_r(char *s, const char *delim, char **s_ptr)
 {
-	unsigned int	i;
-	unsigned int	j;
+	char	*pos;
 
-	i = 0;
-	j = 0;
-	while (*(s + j) && *(s + j) != *(charset + i))
+	s == NULL ? s = *s_ptr : 0;
+	if (!(*s))
 	{
-		if (!*(charset + i))
-		{
-			i = -1;
-			j++;
-		}
-		i++;
+		*s_ptr = s;
+		return (NULL);
 	}
-	return (j);
+	s += ft_strspn(s, delim);
+	if (!(*s))
+	{
+		*s_ptr = s;
+		return (NULL);
+	}
+	pos = s + ft_strcspn(s, delim);
+	if (*pos == '\0')
+	{
+		*s_ptr = pos;
+		return (s);
+	}
+	*pos = '\0';
+	*s_ptr = pos + 1;
+	return (s);
+}
+
+char	*ft_strtok(char *s, const char *delim)
+{
+	static char	*olds;
+	return (ft_strtok_r(s, delim, &olds));
 }

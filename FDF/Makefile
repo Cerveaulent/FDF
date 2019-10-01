@@ -3,10 +3,10 @@
 #                                                               /              #
 #    Makefile                                         .::    .:/ .      .::    #
 #                                                  +:+:+   +:    +:  +:+:+     #
-#    By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+      #
+#    By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/03/28 17:33:52 by ccantin      #+#   ##    ##    #+#        #
-#    Updated: 2019/09/21 16:50:40 by ccantin     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/10/01 11:43:12 by eschnell    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -78,7 +78,8 @@ SRCS_NAME = main.c \
 			free_structs.c \
 			move.c \
 			reset_map.c \
-			transfo_iso.c
+			transfo_iso.c \
+			legend_displayer.c
 
 SRCS = $(addprefix $(SRCS_PATH)/,$(SRCS_NAME))
 

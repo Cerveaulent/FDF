@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   key_handler.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
+/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/08/18 16:04:54 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/09/19 14:30:57 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 10:56:46 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -48,13 +48,7 @@ int		key_pressed(int key, t_hook *m_hook)
 		reset_map(m_hook);
 		return (1);
 	}
-	else if (key == Y)
-	{
-		m_hook->rx += .1;
-		transform(m_hook, key);
-		return (1);
-	}
-	else if (key == I)
+	else if (key == Y || key == I)
 	{
 		transform(m_hook, key);
 		return (1);

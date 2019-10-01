@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   error_handler.c                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
+/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/04/03 19:57:27 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/09/13 12:39:43 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 13:04:57 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,7 +16,7 @@
 /*
 ** This files is filled check functions to raise errors
 */
-static	int check_file_extension(char *argv)
+static int	check_file_extension(char *argv)
 {
 	if (!ft_strstr(argv, ".fdf"))
 	{
@@ -28,7 +28,7 @@ static	int check_file_extension(char *argv)
 	return (0);
 }
 
-int		check_args(int argc, char *argv)
+int			check_args(int argc, char *argv)
 {
 	int	fd;
 
@@ -49,7 +49,7 @@ int		check_args(int argc, char *argv)
 	return (fd);
 }
 
-int check_parsing(int ret)
+int			check_parsing(int ret)
 {
 	if (ret != 0)
 	{

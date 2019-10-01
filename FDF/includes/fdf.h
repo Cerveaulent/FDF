@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   fdf.h                                            .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
+/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/03/26 18:57:18 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 14:37:04 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 16:06:20 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -149,7 +149,14 @@ void					transform(t_hook *hook, int key);
 ** --------------- img handling functions ----------
 **
 */
-void		clear_img(t_hook *hook);
-void test_main_bresenham(t_lpoints point_a, t_lpoints point_b, void *win_ptr, 
-	void *mlx_ptr);
+void					clear_img(t_hook *hook);
+void 					test_main_bresenham(t_lpoints point_a,
+	t_lpoints point_b, void *win_ptr, void *mlx_ptr);
+
+/*
+** --------------- legend_displayer functions ----------
+**
+*/
+void					print_overlay(t_hook *hook, char *mapname);
+
 #endif

@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   libft.h                                          .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
+/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/05 21:19:42 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/09/11 18:42:20 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 14:19:33 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -62,9 +62,10 @@ char				*ft_strtrim(char const *s);
 
 char				*ft_strchr(const char *str, int c);
 char				*ft_strrchr(const char *str, int c);
-size_t				ft_strcspn(char *reject, char *str);
-size_t				ft_strspn(char *reject, char *str);
+size_t				ft_strcspn(const char *s, const char *charset);
+size_t				ft_strspn(const char *s, const char *charset);
 char				*ft_strstr(const char *haystack, const char *needle);
+char				*ft_strtok(char *s, const char *delim);
 char				*ft_strnstr(const char *haystack, const char *needle,
 	size_t len);
 char				*ft_strmerge(char const *s1, char const *s2);
