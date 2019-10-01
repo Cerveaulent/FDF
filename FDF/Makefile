@@ -3,10 +3,10 @@
 #                                                               /              #
 #    Makefile                                         .::    .:/ .      .::    #
 #                                                  +:+:+   +:    +:  +:+:+     #
-#    By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+      #
+#    By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/03/28 17:33:52 by ccantin      #+#   ##    ##    #+#        #
-#    Updated: 2019/10/01 11:43:12 by eschnell    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/10/01 17:42:00 by ccantin     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -23,7 +23,7 @@ OS_NAME := $(shell uname)
 
 CC = clang
 
-CC_FLAGS = -Werror -Wall -Wextra -g -fsanitize=address
+CC_FLAGS = -Werror -Wall -Wextra
 
 ############### 		LIBFT			###############
 
@@ -63,11 +63,10 @@ INC = $(addprefix $(INC_PATH)/,$(INC_NAME))
 SRCS_PATH = srcs
 
 SRCS_NAME = main.c \
-						lpoints_handler.c \
-			point_handler.c \
+			lpoints_handler.c \
 			bresenham.c \
 			scale.c \
-						init_functions.c \
+			init_functions.c \
 			array_handler.c \
 			parsing.c \
 			error_handler.c \
@@ -79,7 +78,8 @@ SRCS_NAME = main.c \
 			move.c \
 			reset_map.c \
 			transfo_iso.c \
-			legend_displayer.c
+			legend_displayer.c \
+			modif_height.c
 
 SRCS = $(addprefix $(SRCS_PATH)/,$(SRCS_NAME))
 

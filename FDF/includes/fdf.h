@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   fdf.h                                            .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/03/26 18:57:18 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 16:06:20 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 17:42:18 by ccantin     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -112,7 +112,7 @@ int						main_parsing(int fd, t_hook *hook);
 void 					main_bresenham(t_lpoints p_a, t_lpoints p_b, t_renderer *rdr);
 
 
-void					scale(int map_scale, t_lpoints *tab_pts, t_map_info *map_info);
+void					scale(t_lpoints *tab_pts, t_map_info *map_info);
 int						print_map(t_hook *m_hook);
 
 /*
@@ -142,7 +142,8 @@ void					zoom_in(t_hook *m_hook);
 void					zoom_out(t_hook *m_hook);
 void					move_map(int key, t_hook *hook);
 void					reset_map(t_hook *hook);
-void					transform(t_hook *hook, int key);
+void					transform(t_hook *hook);
+void					modif_height(t_hook *hook, int is_up);
 
 
 /*

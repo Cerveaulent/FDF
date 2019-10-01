@@ -6,7 +6,7 @@
 /*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/06/20 17:08:28 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/09/13 16:56:57 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 17:08:48 by ccantin     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -47,7 +47,7 @@ static int	fill_list(char **split_res, t_lpoints **lpoints, int ind_line)
 		if ((is_color = ft_strchr(split_res[i], ',')))
 			curr_point.color = parse_color(is_color);
 		else
-			curr_point.color = 0xffffff;;
+			curr_point.color = 0xffffff;
 		curr_point.height = ft_atoi(split_res[i]);
 		ft_strdel(&split_res[i]);
 		curr_point.x = i;
@@ -72,13 +72,15 @@ static int	parse_points(int fd, t_lpoints **lpoints)
 	{
 		if (line[0] == '\0')
 			return (-1);
-		split_line = ft_strsplit(line, ' ');
+		if (!(split_line = ft_strsplit(line, ' ')))
+			return (-1);
 		ft_strdel(&line);
 		if ((fill_list(split_line, lpoints, ind_line)) < 0)
 			return (-1);
 		ind_line++;
 	}
-
+	if (ind_line == 0)
+		return (-1);
 	return (0);
 }
 

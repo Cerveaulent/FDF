@@ -6,7 +6,7 @@
 /*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/08/18 23:18:16 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/09/13 16:56:52 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 16:32:10 by ccantin     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,10 +21,12 @@ static void				init_map_info(t_map_info *map_info)
 	map_info->map_size = 0;
 	map_info->map_scale = 0;
 }
+
 /*
 ** Initialising all the pointers by the mlx functions
 ** They are stored in a structure define in fdf.h
 */
+
 static t_mlx			*init_mlx(void)
 {
 	t_mlx	*mlx_struct;
@@ -42,6 +44,7 @@ static t_mlx			*init_mlx(void)
 ** Initialising all the pointers used by the mlx functions
 ** They are stored in a structure define in fdf.h
 */
+
 t_hook					*init_hook(void)
 {
 	t_hook *m_hook;
@@ -63,6 +66,7 @@ t_hook					*init_hook(void)
 ** Initialising renderer to make easier display and have better
 ** perfs
 */
+
 t_renderer				*init_rdr(t_mlx *mlx, int width, int height)
 {
 	t_renderer	*rdr;

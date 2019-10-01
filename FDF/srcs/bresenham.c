@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   bresenham.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/06/28 21:19:22 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 16:06:22 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 17:21:19 by ccantin     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -29,8 +29,8 @@ void		main_bresenham(t_lpoints p_a, t_lpoints p_b, t_renderer *rdr)
 	init_bres(p_a, p_b, &bres);
 	while (1)
 	{
-		if (p_a.x <= rdr->r_width && p_a.y <= rdr->r_height && p_a.x >= 0 
-			&& p_a.y >= 0 &&
+		if (p_a.x < rdr->r_width && p_a.y < rdr->r_height && p_a.x > 0 
+			&& p_a.y > 0 &&
 			(int)(p_a.y * rdr->r_width + p_a.x) < rdr->r_width * rdr->r_height)
 				rdr->img_data[(int)(p_a.y * rdr->r_width + p_a.x)] = p_a.color;
 		if (p_a.x == p_b.x && p_a.y == p_b.y) 

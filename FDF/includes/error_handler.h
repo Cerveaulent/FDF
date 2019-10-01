@@ -6,7 +6,7 @@
 /*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/06/19 15:34:41 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/08/19 01:16:52 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 16:37:47 by ccantin     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,8 +23,5 @@
 
 int		check_args(int argc, char *argv);
 int 	check_parsing(int ret);
-//function freeing what needs to be freed
-//will be using perror() and strerror() to handle errors
-// I might still need some custom error handling, ENUM ?
 
 #endif

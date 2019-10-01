@@ -6,7 +6,7 @@
 /*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/06/19 21:38:19 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/09/13 16:56:54 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 16:35:50 by ccantin     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,6 @@
 #include "lpoints_handler.h"
 void		array_delete(t_lpoints **array)
 {
-	// printf("%p\n", *array);
 	if (*array)
 		free(*array);
 	*array = NULL;

@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   legend_displayer.c                               .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/01 10:50:56 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 16:00:05 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 16:18:06 by ccantin     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,7 +19,7 @@ static void			put_legend_keyb(t_mlx *mlx, char *descr, int c)
 	static int	height_ofs;
 	int			width_ofs;
 
-	height_ofs = !height_ofs ? TOP_OFFSET : height_ofs + 25;
+	height_ofs = !height_ofs ? TOP_OFFSET + 100 : height_ofs + 25;
 	width_ofs = L_OFFSET / 10;
 	mlx_string_put(mlx->mlx_ptr, mlx->win_ptr, \
 					width_ofs, height_ofs, c, descr);
