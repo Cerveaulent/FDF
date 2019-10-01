@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   error_handler.h                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
+/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/06/19 15:34:41 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 16:37:47 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 20:13:05 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -22,6 +22,6 @@
 # include "libft.h"
 
 int		check_args(int argc, char *argv);
-int 	check_parsing(int ret);
+int		check_parsing(int ret);
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   parsing.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
+/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/06/20 17:08:28 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 17:08:48 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 20:58:58 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,14 +15,14 @@
 #include "lpoints_handler.h"
 #include "array_handler.h"
 
-static int parse_color(char *is_color)
+static int	parse_color(char *is_color)
 {
-	int size_color;
-	int r;
-	int g;
-	int b;
+	int	size_color;
+	int	r;
+	int	g;
+	int	b;
 
-	if ((size_color = ft_strlen(is_color)) < 8 )
+	if ((size_color = ft_strlen(is_color)) < 8)
 	{
 		ft_putendl("Color parsed Invalid : color set to 0xffffff");
 		return (0xffffff);
@@ -37,11 +37,10 @@ static int	fill_list(char **split_res, t_lpoints **lpoints, int ind_line)
 {
 	int			i;
 	t_lpoints	curr_point;
-	char 		*is_color;
+	char		*is_color;
 
 	i = 0;
 	is_color = NULL;
-
 	while (split_res[i] && (split_res[i][0] != '\0'))
 	{
 		if ((is_color = ft_strchr(split_res[i], ',')))

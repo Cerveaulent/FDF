@@ -3,16 +3,15 @@
 /*                                                              /             */
 /*   init_functions.c                                 .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
+/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/08/18 23:18:16 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 16:32:10 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 20:31:06 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "fdf.h"
-
 
 static void				init_map_info(t_map_info *map_info)
 {
@@ -50,9 +49,9 @@ t_hook					*init_hook(void)
 	t_hook *m_hook;
 
 	m_hook = NULL;
-	if(!(m_hook = malloc(sizeof(t_hook))))
+	if (!(m_hook = malloc(sizeof(t_hook))))
 		return (NULL);
-	if(!(m_hook->map_info = malloc(sizeof(t_map_info))))
+	if (!(m_hook->map_info = malloc(sizeof(t_map_info))))
 		return (NULL);
 	init_map_info(m_hook->map_info);
 	m_hook->tab_pts = NULL;
@@ -82,7 +81,7 @@ t_renderer				*init_rdr(t_mlx *mlx, int width, int height)
 	rdr->img.bpp = 0;
 	rdr->img.endian = 0;
 	rdr->img_ptr = mlx_new_image(mlx->mlx_ptr, width, height);
-	rdr->img_data = (unsigned int *)mlx_get_data_addr(rdr->img_ptr, &rdr->img.bpp,
-		&rdr->img.size_l, &rdr->img.endian);
+	rdr->img_data = (unsigned int *)mlx_get_data_addr(rdr->img_ptr, \
+		&rdr->img.bpp, &rdr->img.size_l, &rdr->img.endian);
 	return (rdr);
-}	
+}

@@ -3,19 +3,19 @@
 /*                                                              /             */
 /*   scale.c                                          .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
+/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/07/03 16:20:37 by charles      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 16:39:09 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 20:45:02 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-void scale(t_lpoints *t_points, t_map_info *map_info)
+void	scale(t_lpoints *t_points, t_map_info *map_info)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < map_info->map_size)

@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/07/16 04:23:08 by raging       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 14:21:48 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 21:01:37 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -40,8 +40,9 @@ static char	*ft_strtok_r(char *s, const char *delim, char **s_ptr)
 	return (s);
 }
 
-char	*ft_strtok(char *s, const char *delim)
+char		*ft_strtok(char *s, const char *delim)
 {
 	static char	*olds;
+
 	return (ft_strtok_r(s, delim, &olds));
 }

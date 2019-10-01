@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/01 10:50:56 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 18:05:15 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 20:31:40 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -46,12 +46,12 @@ static void			put_pane(t_mlx *mlx, int x, int y)
 	int	j;
 
 	j = -1;
-    while (++j < y)
-    {
+	while (++j < y)
+	{
 		i = -1;
-        while (++i < x)
+		while (++i < x)
 			mlx_pixel_put(mlx->mlx_ptr, mlx->win_ptr, i, j, _RED);
-    }
+	}
 }
 
 void				print_overlay(t_hook *hook, char *mapname)

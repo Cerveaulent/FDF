@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/03/26 18:57:18 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 18:56:51 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 20:19:28 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,6 +19,7 @@
 # include <math.h>
 # include "error_handler.h"
 # include "key_map.h"
+
 /*
 ** ---------------------DEFINES--------------------- **
 */
@@ -28,19 +29,8 @@
 # define TOP_OFFSET 200
 
 /*
-** --------------------ENUMS------------------------ **
-*/
-
-/*
 ** --------------------STRUCTURES------------------- **
 */
-
-// typedef struct	s_matrix
-// {
-// 	float		mat[3][3];
-// 	float		angl;
-// }				t_matrix;
-
 typedef struct			s_lpoints
 {
 	double				height;
@@ -52,13 +42,13 @@ typedef struct			s_lpoints
 
 }						t_lpoints;
 
-typedef struct 			s_mlx
+typedef struct			s_mlx
 {
 	void				*win_ptr;
 	void				*mlx_ptr;
 }						t_mlx;
 
-typedef struct 			s_map_info
+typedef struct			s_map_info
 {
 	int					nb_col;
 	int					nb_row;
@@ -71,7 +61,6 @@ typedef struct			s_img
 	int					bpp;
 	int					size_l;
 	int					endian;
-	
 }						t_img;
 
 typedef struct			s_renderer
@@ -96,7 +85,7 @@ typedef struct			s_hook
 
 typedef struct			s_err_bres
 {
-	int					dx; 
+	int					dx;
 	int					dy;
 	int					err;
 	int					sx;
@@ -108,33 +97,26 @@ typedef struct			s_err_bres
 ** ------------------FUNCTIONS---------------------- **
 ** -------------------------------------------------
 */
-
 int						main_parsing(int fd, t_hook *hook);
-void 					main_bresenham(t_lpoints p_a, t_lpoints p_b, t_renderer *rdr);
-
-
+void					main_bresenham(t_lpoints p_a, t_lpoints p_b, \
+	t_renderer *rdr);
 void					scale(t_lpoints *tab_pts, t_map_info *map_info);
 int						print_map(t_hook *m_hook);
 
 /*
-**---------------- free_struct.c ---------------
-**
+** ---------------- free_struct.c ---------------
 */
 void					free_hook(t_hook *hook);
 
 /*
 ** --------------- init_functions -----------------
-**
 */
-// t_mlx					*init_mlx(void);
 t_hook					*init_hook(void);
 t_renderer				*init_rdr(t_mlx *mlx, int width, int height);
 
 /*
 ** --------------- event_functions -----------------
-**
 */
-
 int						key_pressed(int key, t_hook *m_hook);
 int						mouse_pressed(int key, int x, int y,
 	t_hook *m_hook);
@@ -146,18 +128,15 @@ void					reset_map(t_hook *hook);
 void					transform(t_hook *hook);
 void					modif_height(t_hook *hook, int is_up);
 
-
 /*
 ** --------------- img handling functions ----------
-**
 */
 void					clear_img(t_hook *hook);
-void 					test_main_bresenham(t_lpoints point_a,
+void					test_main_bresenham(t_lpoints point_a,
 	t_lpoints point_b, void *win_ptr, void *mlx_ptr);
 
 /*
 ** --------------- legend_displayer functions ----------
-**
 */
 void					print_overlay(t_hook *hook, char *mapname);
 

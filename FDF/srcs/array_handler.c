@@ -3,16 +3,17 @@
 /*                                                              /             */
 /*   array_handler.c                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
+/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/06/19 21:38:19 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 16:35:50 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 20:21:18 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "fdf.h"
 #include "lpoints_handler.h"
+
 void		array_delete(t_lpoints **array)
 {
 	if (*array)
@@ -20,7 +21,7 @@ void		array_delete(t_lpoints **array)
 	*array = NULL;
 }
 
-t_lpoints		*array_alloc(int nb_row, int nb_col)
+t_lpoints	*array_alloc(int nb_row, int nb_col)
 {
 	t_lpoints	*new_array;
 
@@ -34,13 +35,12 @@ t_lpoints		*array_alloc(int nb_row, int nb_col)
 	return (new_array);
 }
 
-
-void	array_fill(t_lpoints *lpoints, t_lpoints **array, \
+void		array_fill(t_lpoints *lpoints, t_lpoints **array, \
 	int nb_row, int nb_col)
 {
-	t_lpoints *tmp;
-	int reset_nb_col;
-	int i;
+	t_lpoints	*tmp;
+	int			reset_nb_col;
+	int			i;
 
 	reset_nb_col = nb_col;
 	tmp = lpoints;

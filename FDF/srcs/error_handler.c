@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/04/03 19:57:27 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 13:04:57 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 20:22:02 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,6 +16,7 @@
 /*
 ** This files is filled check functions to raise errors
 */
+
 static int	check_file_extension(char *argv)
 {
 	if (!ft_strstr(argv, ".fdf"))

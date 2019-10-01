@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/01 17:59:31 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 18:56:06 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 20:10:46 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 # define COLORS_H
 /*
 ** Color palette borrowed thanks to
-**  https://www.htmlcsscolor.com
+** https://www.htmlcsscolor.com
 */
 
 # define _BLACK		0x000000
@@ -60,4 +60,4 @@
 # define _PURPLE_TWO	0xC27BA0
 # define _PURPLE_THREE	0xA64D79
 # define _PURPLE_FOUR	0x741B47
-#endif /* COLOR_H */
+#endif

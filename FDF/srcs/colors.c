@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/01 18:51:42 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 19:28:14 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 20:36:12 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -25,9 +25,9 @@ static void	affect_purple(t_hook *hook, int i, int j)
 	j == 31 ? hook->tab_pts[i].color = _PURPLE_FOUR : 0;
 }
 
-static void affect_blue(t_hook *hook, int i, int j)
+static void	affect_blue(t_hook *hook, int i, int j)
 {
-	j == 16 ? hook->tab_pts[i].color = _TURQ_ONE: 0;
+	j == 16 ? hook->tab_pts[i].color = _TURQ_ONE : 0;
 	j == 17 ? hook->tab_pts[i].color = _TURQ_TWO : 0;
 	j == 18 ? hook->tab_pts[i].color = _TURQ_THREE : 0;
 	j == 19 ? hook->tab_pts[i].color = _TURQ_FOUR : 0;
@@ -38,7 +38,7 @@ static void affect_blue(t_hook *hook, int i, int j)
 	affect_purple(hook, i, j);
 }
 
-static void affect_green_yellow(t_hook *hook, int i, int j)
+static void	affect_green_yellow(t_hook *hook, int i, int j)
 {
 	j == 8 ? hook->tab_pts[i].color = _YELLOW_ONE : 0;
 	j == 9 ? hook->tab_pts[i].color = _YELLOW_TWO : 0;
@@ -51,7 +51,7 @@ static void affect_green_yellow(t_hook *hook, int i, int j)
 	affect_blue(hook, i, j);
 }
 
-static void affect_red(t_hook *hook, int i, int j)
+static void	affect_red(t_hook *hook, int i, int j)
 {
 	j == 0 ? hook->tab_pts[i].color = _RED_ONE : 0;
 	j == 1 ? hook->tab_pts[i].color = _RED_TWO : 0;
@@ -64,7 +64,7 @@ static void affect_red(t_hook *hook, int i, int j)
 	affect_green_yellow(hook, i, j);
 }
 
-void	color_pick(t_hook *hook)
+void		color_pick(t_hook *hook)
 {
 	int			i;
 	static int	j;

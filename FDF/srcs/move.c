@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   move.c                                           .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ccantin <ccantin@student.le-101.fr>        +:+   +:    +:    +:+     */
+/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/09/13 15:32:31 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/09/13 16:44:42 by ccantin     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/01 20:35:39 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,7 +14,7 @@
 #include "fdf.h"
 #include "key_map.h"
 
-static void apply_move(t_hook *hook, int move)
+static void	apply_move(t_hook *hook, int move)
 {
 	int	i;
 
