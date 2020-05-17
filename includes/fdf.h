@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   fdf.h                                            .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: charles <charles@student.le-101.fr>        +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/03/26 18:57:18 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 20:19:28 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/05/17 17:44:50 by charles     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,6 +19,7 @@
 # include <math.h>
 # include "error_handler.h"
 # include "key_map.h"
+# include "mouse_map.h"
 
 /*
 ** ---------------------DEFINES--------------------- **
@@ -56,12 +57,12 @@ typedef struct			s_map_info
 	int					map_scale;
 }						t_map_info;
 
-typedef struct			s_img
+typedef struct			s_imgs
 {
 	int					bpp;
 	int					size_l;
 	int					endian;
-}						t_img;
+}						t_imgs;
 
 typedef struct			s_renderer
 {
@@ -69,7 +70,7 @@ typedef struct			s_renderer
 	int					r_height;
 	void				*img_ptr;
 	unsigned int		*img_data;
-	t_img				img;
+	t_imgs				img;
 
 }						t_renderer;
 

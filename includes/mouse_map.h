@@ -3,16 +3,34 @@
 /*                                                              /             */
 /*   mouse_map.h                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: charles <charles@student.le-101.fr>        +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/08/19 01:30:15 by ccantin      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/01 20:13:15 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/05/17 17:37:57 by charles     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #ifndef MOUSE_MAP_H
 # define MOUSE_MAP_H
-# define SCROLL_UP 4
-# define SCROLL_DOWN 5
+# ifdef _linux_
+
+#  define M_NONE 0
+#  define M_LCLICK 1
+#  define M_RCLICK 2
+#  define M_WHEELCLICK 3
+#  define M_WHEELUP 4
+#  define M_WHEELDOWN 5
+#  define MAX_MBUTTON 6
+
+# else
+
+#  define M_NONE 0
+#  define M_LCLICK 1
+#  define M_RCLICK 2
+#  define M_WHEELCLICK 3
+#  define MAX_MBUTTON 6
+#  define SCROLL_UP 5
+#  define SCROLL_DOWN 4
+# endif
 #endif
