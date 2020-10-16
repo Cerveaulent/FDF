@@ -13,7 +13,8 @@
   *The **miniLibX** only allows you to open a window and change the color of pixels inside it. To draw lines I used an integer based Bresenham algorithm.*
   
   *To use the program, clone the repo, then use make command to compile, then enter "./fdf nameofthetestmap.txt"*
-  *The program should work for MacOS and Linux*
+ 
+ *The program should work for MacOS and Linux*
   
 ###
 
